@@ -113,6 +113,9 @@ body {
     width:  100%;
     height: 100vh;
     color: black;
+    background: url("B:/VS CODE/Магазин/src/images/IMG_3810.JPEG");
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     padding: 50px 8% 0;
