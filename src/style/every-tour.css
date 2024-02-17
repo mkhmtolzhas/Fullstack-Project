@@ -14,6 +14,10 @@ body {
 
 }
 
+.al-t-cen {
+    text-align: center;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -40,7 +44,7 @@ body {
     font-weight: 500;
     margin: 0 20px;
     transition: .3s;
-    text-shadow: black 0 0 5px, black 0 0 5px, 0 0 3px;  
+    text-shadow: black 0 0 5px, black 0 0 5px, black 0 0 3px;  
 }
 
 .navbar a:hover, .navbar a.active{
@@ -49,16 +53,20 @@ body {
 }
 
 
+
+
+
+/* Home */
 .home {
     width: 100%;
     height: 100vh;
-    /* background: url('B:/VS CODE/Магазин/src/images/IMG_3767.JPEG') no-repeat; */
+    background: url('B:/VS CODE/Магазин/src/images/BabALBahr.jpeg') no-repeat;
     background-size: cover;
     /* background-position: center; */
     display: flex;
     align-items: center;
     padding: 50px 8% 0;
-    text-shadow: #fff 0 0 1px, #fff 0 0 2px, #fff 0 0 3px;
+    text-shadow: black 0 0 4px, black 0 0 5px, black 0 0 7px;
 }
 
 .home-content {
@@ -69,12 +77,6 @@ body {
     font-size: 45px;
     line-height: 1.2;
 }
-
-/* .home-content h1:nth-child(3) {
-    background: linear-gradient(#59ffff, #1952ab);
-    -webkit-background-clip: text;
-    color: transparent;
-} */
 
 .home-content p {
     font-size: 16px;
@@ -99,45 +101,57 @@ body {
     font-weight: 600;
 }
 
-.btn-box .btn:nth-child(2) {
-    background: transparent;
-    color: #42c1e8;
-    transition: .5s;
-}
-
-.btn-box .btn:nth-child(2):hover {
-    background: #42c1e8;
-    color: #01003f;
-}
 
 
 
+
+/* Content */
 .content {
     width:  100%;
-    height: 100vh;
+    min-height: 100vh;
     color: black;
-    background: #fff;
-    /* background: url("B:/VS CODE/Магазин/src/images/IMG_3810.JPEG"); */
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    padding: 80px 8% 0;
+    /* display: flex;
+    align-items: center; */
+    padding: 50px 8% 80px;
 }
 
 .content-box {
     width: 100%;
-    /* max-width: 630px; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
-.content-box h1 {
-    text-align: center;
-} 
+.content-box p {
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
 
+.div-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 30px;
+}
+
+.inner-content {
+    max-width: calc(100%/3.5);
+}
+
+.inner-content h3{
+    font-size: 22px;
+}
+
+.inner-content p{
+    margin: 25px 30px;
+}
+
+
+
+
+
+
+/* Slick */
 .tours {
     display: flex;
     margin-top: 70px;
@@ -158,64 +172,12 @@ body {
     border-radius: 20px;
 }
 
-.inner-col1 {
-    background: url("https://edge.travelatacdn.ru/upload/2022_07/content_hotel_62123904bddb56.48731519.jpeg") no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
 
 .slick-arrow {
     filter: drop-shadow(6px 6px 3px rgba(0, 0, 0, 0.8));
 }
 
-
-
-
-/* Recomended */
-.most-popular{
-    width:  100%;
-    min-height: 100vh;
-    color: black;
-    background: #F5F8FA;
-    /* background: url("B:/VS CODE/Магазин/src/images/IMG_3810.JPEG"); */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    padding: 80px 8% 80px;
-}
-
-.content-popular {
-    width: 100%;
-}
-
-.most-popular h1 {
-    text-align: center;
-}
-
-.tours2 {
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-    margin-bottom: 80px;
-}
-
-.col-md-20 {
-    height: 30vh;
-    border-radius: 20px;
-}
-.inner-col2 {
-    width: 90%;
-    height: 30vh;
-    background: #000;
-    border-radius: 20px;
-}
-
-.mg-80 {
-    margin-top: 80px;
-}
 
 
 
@@ -267,7 +229,7 @@ footer {
 
 
 
-/* Модальное окно */
+/* Modal */
 .modal {
     display: none;
     align-items: center;
