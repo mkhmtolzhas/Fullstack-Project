@@ -1,18 +1,23 @@
-// Получаем все якорные ссылки
-const links = document.querySelectorAll('a[href^="#"]');
+// Получаем ссылки на элементы
+var modal = document.getElementById("myModal");
+var content = document.getElementById("close-login")
+var btn = document.getElementById("openModalBtn");
+var span = document.getElementsByClassName("close")[0];
 
-// Прокручиваем к якорю с плавной анимацией при клике на ссылку
-links.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
+// Когда пользователь кликает на кнопку, открываем модальное окно
+btn.onclick = function() {
+  console.log("Button clicked");
+  modal.style.display = "block";
+}
 
-        const targetId = this.getAttribute('href').slice(1);
-        const targetElement = document.getElementById(targetId);
-        const topOffset = targetElement.offsetTop;
+// Когда пользователь кликает на крестик, закрываем модальное окно
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
-        window.scrollTo({
-            top: topOffset,
-            behavior: 'smooth'
-        });
-    });
-});
+// Когда пользователь кликает за пределами модального окна, закрываем его
+window.onclick = function(event) {
+  if (event.target == content) {
+    modal.style.display = "none";
+  }
+}

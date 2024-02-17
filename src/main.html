@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="B:/VS CODE/Магазин/src/style/main.css">
+    <link rel="icon" href="./icons/airplane-outline.svg" type="image/x-icon">
     <title>Shop</title>
 </head>
 <body>
@@ -17,7 +18,8 @@
             <a href="#contacts" class="">Contacts</a>
         </nav>
 
-        <a href="#" class="btn">Sign Up</a>
+        <a href="#" class="btn" id="openModalBtn">Sign Up</a>
+
     </header>
 
     <section class="home">
@@ -30,7 +32,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo non ante accumsan feugiat. Integer nec metus et lorem condimentum cursus. Nam nec convallis eros. In sit amet venenatis nisi. Cras nec ligula non magna fermentum bibendum.
             </p>
             <div class="btn-box">
-                <a href="login.html" class="btn">Get Started</a>
+                <a href="register.html" class="btn">Get Started</a>
                 <a href="#" class="btn">Learn More</a>
             </div>
         </div>
@@ -78,7 +80,7 @@
                 <a href="">About Us</a>
             </li>
             <li>
-                <a href="tel:+77767301903">Phone Number</a>
+                <a href="">Service Forms</a>
             </li>
             <li>
                 <a href="">Our Tours</a>
@@ -87,13 +89,13 @@
         <div class="sections">
             <h5>FOR BUSINESS</h5>
             <li>
-                <a href="">Log In</a>
+                <a href="login.html">Log In</a>
             </li>
             <li>
                 <a href="">Make a Donation</a>
             </li>
             <li>
-                <a href="">Service Forms</a>
+                <a href="tel:+77767301903">Phone Number</a>
             </li>
         </div>
         <div class="sections">
@@ -106,6 +108,37 @@
             </div>
         </div>
     </footer>
+
+    <div id="myModal" class="modal">
+        <!-- <span class="close">&times;</span> -->
+        <div class="modal-content" id="close-login">
+            <div class="form-box">
+                <div class="form-value">
+                    <form action="">
+                        <h2>Login</h2>
+                        <div class="inputbox">
+                            <ion-icon name="accessibility-outline"></ion-icon>
+                            <input type="text" required>
+                            <label for="">Name</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="call-outline"></ion-icon>
+                            <input type="tel" required>
+                            <label for="">Phone Number</label>
+                        </div>
+                        <!-- <div class="forget">
+                            <label for=""><input type="checkbox">Remember Me</label>
+                        </div> -->
+                        <button>Log In</button>
+                        <div class="register">
+                            <p>Don't have an account? <a href="register.html">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/modal.js"></script>
     <script src="./scripts/scroll.js"></script>
 </body>
 </html>

@@ -3,24 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smooth Scroll Example</title>
+    <title>Modal Window Example</title>
     <style>
-        /* Добавьте стили по вашему усмотрению */
+        /* Стили для модального окна */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
-        </ul>
-    </nav>
 
-    <div id="section1" style="height: 1000px; background-color: lightblue;">Section 1</div>
-    <div id="section2" style="height: 1000px; background-color: lightgreen;">Section 2</div>
-    <div id="section3" style="height: 1000px; background-color: lightcoral;">Section 3</div>
+<button id="openModalBtn">Open Modal</button>
 
-    <script src="script.js"></script>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="form-box">
+        <div class="form-value">
+            <form action="">
+                <h2>Login</h2>
+                <div class="inputbox">
+                    <ion-icon name="accessibility-outline"></ion-icon>
+                    <input type="text" required>
+                    <label for="">Name</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <input type="tel" required>
+                    <label for="">Phone Number</label>
+                </div>
+                <!-- <div class="forget">
+                    <label for=""><input type="checkbox">Remember Me</label>
+                </div> -->
+                <button>Log In</button>
+                <div class="register">
+                    <p>Don't have an account? <a href="#">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
