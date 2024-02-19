@@ -1,11 +1,30 @@
 from fastapi import FastAPI, Depends
 from fastapi_users import FastAPIUsers
+from fastapi.middleware.cors import CORSMiddleware
+
+
 from auth.database import User
 from auth.auth import auth_backend
 from auth.manager import get_user_manager
 from auth.schemas import UserRead, UserCreate
 
+
+from get_tour.router import router as router_tour
+
 app = FastAPI()
+
+
+origins = ["*"]
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 fastapi_users = FastAPIUsers[User, int](
     get_user_manager,
@@ -36,6 +55,9 @@ app.include_router(
     tags=["auth"],
 )
 
+app.include_router(
+    router_tour
+)
 
 @app.get("/protected-route")
 def protected_route(user: User = Depends(current_user)):
@@ -46,7 +68,3 @@ def protected_route():
     return f"Hello, Newbie!"
 
 
-
-# @app.get("/protected-route")
-# def protected_route(user: User = Depends(current_active_verified_user)):
-#     return f"Hello, {user.email}"
